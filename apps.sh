@@ -2,25 +2,25 @@
 
 PACKAGES=(
     # cli/tui
-    git
     fish
     fzf
     tmux
     zoxide
-    lazygit
     yt-dlp
-    github-cli
     yazi
-    tree-sitter-cli
+    fd
+    kanata-bin
+
+    # browsers
+    brave-bin
+
+    # gaming
+    steam
+    heroic-games-launcher-bin
 
     # fonts
     otf-font-awesome
     ttf-jetbrains-mono
-
-
-    # editors
-    neovim
-    helix
 
     # hyprland utils
     waybar
@@ -28,33 +28,40 @@ PACKAGES=(
     hyprpaper
     xdg-desktop-portal-hyprland
     udiskie
+    hyprlock
+    hypridle
+    hyprpolkitagent
+    pavucontrol
 
     # dev
+    git
+    tree-sitter-cli
+    lazygit
     nodejs
-)
+    docker
+    docker-compose
+    github-cli
+    # editors
+    neovim
+    helix
 
-AUR_PACKAGES=(
-    kanata-bin
-    heroic-games-launcher-bin
+    # lsp
+    pyright
+    typescript-language-server
+    gopls
+    bash-language-server
 )
 
 # Update package database and upgrade system
 echo "Updating package database and upgrading system..."
-sudo pacman -Syu --noconfirm || {
+paru -Syu --noconfirm || {
     echo "Error: Failed to update system. Exiting."
     exit 1
 }
 
 echo "Installing packages: ${PACKAGES[*]}"
-if sudo pacman -S --noconfirm "${PACKAGES[@]}"; then
+if paru -S --noconfirm "${PACKAGES[@]}"; then
     echo "✓ All packages installed successfully!"
-else
-    echo "✗ Installation completed with some errors (check output above)."
-fi
-
-echo "Installing packages: ${PACKAGES[*]}"
-if paru -S --noconfirm "${AUR_PACKAGES[@]}"; then
-    echo "✓ All AUR packages installed successfully!"
 else
     echo "✗ Installation completed with some errors (check output above)."
 fi
