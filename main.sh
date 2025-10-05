@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-# todo: get rootdir for this script to load modules
-# todo: install paru
-# todo: load module to install packages 
+ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
+MODULES_DIR="${ROOT_DIR}/modules"
+
+source "${MODULES_DIR}/apps.sh"
+source "${MODULES_DIR}/paru.sh"
+
 # todo: uncommend color and multilib from /etc/pacman.conf
 # todo: clone dotfiles repo
 
