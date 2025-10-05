@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PACKAGES=(
-    # cli/tui
+    ### cli ###
     fish
     fzf
     tmux
@@ -11,18 +11,18 @@ PACKAGES=(
     fd
     kanata-bin
 
-    # browsers
+    ### browser ###
     brave-bin
 
-    # gaming
+    ### gaming ###
     steam
     heroic-games-launcher-bin
 
-    # fonts
+    ### fonts ###
     otf-font-awesome
     ttf-jetbrains-mono
 
-    # hyprland utils
+    ### hyprland and utilities ###
     waybar
     dunst
     hyprpaper
@@ -33,7 +33,8 @@ PACKAGES=(
     hyprpolkitagent
     pavucontrol
 
-    # dev
+    ### dev ###
+    # tools
     git
     tree-sitter-cli
     lazygit
@@ -44,7 +45,6 @@ PACKAGES=(
     # editors
     neovim
     helix
-
     # lsp
     pyright
     typescript-language-server
@@ -60,7 +60,7 @@ paru -Syu --noconfirm || {
 }
 
 echo "Installing packages: ${PACKAGES[*]}"
-if paru -S --noconfirm "${PACKAGES[@]}"; then
+if paru -S --needed --noconfirm "${PACKAGES[@]}"; then
     echo "✓ All packages installed successfully!"
 else
     echo "✗ Installation completed with some errors (check output above)."
