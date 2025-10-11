@@ -50,11 +50,15 @@ PACKAGES=(
     ### fonts ###
     otf-font-awesome
     ttf-jetbrains-mono
+    noto-fonts
+    noto-fonts-emoji
+    noto-fonts-extra
 
     ### hyprland and utilities ###
     waybar
     dunst
     hyprpaper
+    xdg-desktop-portal
     xdg-desktop-portal-hyprland
     udiskie
     hyprlock
