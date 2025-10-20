@@ -15,3 +15,5 @@ source "${MODULES_DIR}/uwsm.sh"
 # change default shell to fish
 # todo: check if fish is installed and set as default shell
 # chsh -s /usr/bin/fish
+
+notify-send "Arch Setup" "Done!"
