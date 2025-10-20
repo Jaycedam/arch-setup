@@ -21,19 +21,14 @@ PACKAGES=(
     imagemagick
     typst
     pacman-contrib
+    flatpak
 
     # desktop
     signal-desktop
-    proton-pass-bin
-    cryptomator-bin
     gimp
-    localsend-bin
-    ente-desktop-bin
     mpv
     libreoffice-still
-    grayjay-bin
     transmission-qt
-    ventoy-bin
 
     # terminal emulators
     kitty
@@ -41,11 +36,9 @@ PACKAGES=(
 
     ### browser ###
     brave-bin
-    zen-browser-bin
 
     ### gaming ###
     steam
-    heroic-games-launcher-bin
 
     ### fonts ###
     otf-font-awesome
@@ -58,6 +51,7 @@ PACKAGES=(
     waybar
     dunst
     hyprpaper
+    hyprlauncher
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     udiskie
@@ -113,6 +107,16 @@ PACKAGES=(
     shellcheck
 )
 
+FLATPAKS=(
+    app.zen_browser.zen
+    org.cryptomator.Cryptomator
+    io.ente.photos
+    app.grayjay.Grayjay
+    org.localsend.localsend_app
+    com.github.tchx84.Flatseal
+    com.heroicgameslauncher.hgl
+)
+
 # Update package database and upgrade system
 echo "Updating package database and upgrading system..."
 paru -Syu --noconfirm || {
@@ -123,6 +127,13 @@ paru -Syu --noconfirm || {
 echo "Installing packages: ${PACKAGES[*]}"
 if paru -S --needed --noconfirm "${PACKAGES[@]}"; then
     echo "✓ All packages installed successfully!"
+else
+    echo "✗ Installation completed with some errors (check output above)."
+fi
+
+echo "Installing flatpaks: ${FLATPAKS[*]}"
+if flatpak install -y "${FLATPAKS[@]}"; then
+    echo "✓ All flatpaks installed successfully!"
 else
     echo "✗ Installation completed with some errors (check output above)."
 fi
