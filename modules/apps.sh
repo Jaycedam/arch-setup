@@ -21,7 +21,9 @@ PACKAGES=(
     imagemagick
     typst
     pacman-contrib
+    wine
     flatpak
+    7zip
 
     # desktop
     signal-desktop
@@ -39,6 +41,12 @@ PACKAGES=(
 
     ### gaming ###
     steam
+    lutris
+    gamemode
+    lib32-gamemode
+    gamescope
+    lib32-gnutls
+    dolphin-emu
 
     ### fonts ###
     otf-font-awesome
@@ -46,6 +54,9 @@ PACKAGES=(
     noto-fonts
     noto-fonts-emoji
     noto-fonts-extra
+
+    # themes
+    catppuccin-gtk-theme-mocha
 
     ### hyprland and utilities ###
     waybar
@@ -60,6 +71,7 @@ PACKAGES=(
     hyprpolkitagent
     pavucontrol
     rofi
+    nwg-look
 
     ### dev ###
     # tools
@@ -114,7 +126,13 @@ FLATPAKS=(
     app.grayjay.Grayjay
     org.localsend.localsend_app
     com.github.tchx84.Flatseal
+
+    # gaming
     com.heroicgameslauncher.hgl
+    net.pcsx2.PCSX2
+    net.shadps4.shadPS4
+    io.github.gopher64.gopher64
+    org.azahar_emu.Azahar
 )
 
 # Update package database and upgrade system
