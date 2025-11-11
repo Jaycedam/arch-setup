@@ -68,6 +68,7 @@ PACKAGES=(
     udiskie
     hyprlock
     hypridle
+    hyprsunset
     hyprpolkitagent
     pavucontrol
     rofi
