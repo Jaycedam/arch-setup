@@ -23,7 +23,13 @@ PACKAGES=(
     pacman-contrib
     wine
     flatpak
+    lsfg-vk-bin
     7zip
+    grim
+    slurp
+    fwupd
+    fastfetch
+    swayimg
 
     # desktop
     signal-desktop
@@ -134,6 +140,7 @@ FLATPAKS=(
     net.shadps4.shadPS4
     io.github.gopher64.gopher64
     org.azahar_emu.Azahar
+    net.davidotek.pupgui2
 )
 
 # Update package database and upgrade system
