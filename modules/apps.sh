@@ -30,6 +30,7 @@ PACKAGES=(
     fwupd
     fastfetch
     swayimg
+    timeshift xorg-xhost
 
     # desktop
     signal-desktop
