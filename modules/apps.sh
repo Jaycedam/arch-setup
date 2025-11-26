@@ -38,6 +38,10 @@ PACKAGES=(
     mpv
     libreoffice-still
     transmission-qt
+    cryptomator-bin
+    ente-desktop-bin
+    grayjay-bin
+    localsend-bin
 
     # terminal emulators
     kitty
@@ -45,6 +49,7 @@ PACKAGES=(
 
     ### browser ###
     brave-bin
+    zen-browser-bin
 
     ### gaming ###
     steam
@@ -54,6 +59,11 @@ PACKAGES=(
     gamescope
     lib32-gnutls
     dolphin-emu
+    shadps4-bin
+    gopher64-bin
+    heroic-games-launcher-bin
+    protonup-qt-bin
+    pcsx2-latest-bin
 
     ### fonts ###
     otf-font-awesome
@@ -66,6 +76,7 @@ PACKAGES=(
     catppuccin-gtk-theme-mocha
 
     ### hyprland and utilities ###
+    hyprland
     waybar
     dunst
     hyprpaper
@@ -80,6 +91,7 @@ PACKAGES=(
     pavucontrol
     rofi
     nwg-look
+    swayosd
 
     ### dev ###
     # tools
@@ -94,7 +106,6 @@ PACKAGES=(
     github-cli
     # ai
     opencode-bin
-    gemini-cli-bin
     # editors
     neovim
     helix
@@ -127,23 +138,6 @@ PACKAGES=(
     shellcheck
 )
 
-FLATPAKS=(
-    app.zen_browser.zen
-    org.cryptomator.Cryptomator
-    io.ente.photos
-    app.grayjay.Grayjay
-    org.localsend.localsend_app
-    com.github.tchx84.Flatseal
-
-    # gaming
-    com.heroicgameslauncher.hgl
-    net.pcsx2.PCSX2
-    net.shadps4.shadPS4
-    io.github.gopher64.gopher64
-    org.azahar_emu.Azahar
-    net.davidotek.pupgui2
-)
-
 # Update package database and upgrade system
 echo "Updating package database and upgrading system..."
 paru -Syu --noconfirm || {
@@ -154,13 +148,6 @@ paru -Syu --noconfirm || {
 echo "Installing packages: ${PACKAGES[*]}"
 if paru -S --needed --noconfirm "${PACKAGES[@]}"; then
     echo "✓ All packages installed successfully!"
-else
-    echo "✗ Installation completed with some errors (check output above)."
-fi
-
-echo "Installing flatpaks: ${FLATPAKS[*]}"
-if flatpak install -y "${FLATPAKS[@]}"; then
-    echo "✓ All flatpaks installed successfully!"
 else
     echo "✗ Installation completed with some errors (check output above)."
 fi
