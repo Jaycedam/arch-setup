@@ -23,7 +23,7 @@ PACKAGES=(
     pacman-contrib
     wine
     flatpak
-    lsfg-vk-bin
+    lsfg-vk-bin # only git version on chaotic
     7zip
     grim
     slurp
@@ -37,11 +37,11 @@ PACKAGES=(
     gimp
     mpv
     libreoffice-still
-    transmission-qt
-    cryptomator-bin
+    transmission-gtk
+    cryptomator
     ente-desktop-bin
     grayjay-bin
-    localsend-bin
+    localsend
 
     # terminal emulators
     kitty
@@ -59,11 +59,11 @@ PACKAGES=(
     gamescope
     lib32-gnutls
     dolphin-emu
-    shadps4-bin
-    gopher64-bin
+    shadps4-bin # check chaotic differences
+    gopher64
     heroic-games-launcher-bin
-    protonup-qt-bin
-    pcsx2-latest-bin
+    protonup-qt
+    pcsx2-latest-bin # chaotic only has git version
 
     ### fonts ###
     otf-font-awesome
@@ -106,6 +106,7 @@ PACKAGES=(
     github-cli
     # ai
     opencode-bin
+    gemini-cli
     # editors
     neovim
     helix
