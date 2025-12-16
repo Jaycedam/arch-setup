@@ -6,6 +6,7 @@ PACKAGES=(
     fish
     btop
     fzf
+    trash-cli
     tldr
     tmux
     ripgrep
@@ -17,7 +18,9 @@ PACKAGES=(
     fd
     kanata-bin
     openssh
+    less
     dmidecode
+    jq
     imagemagick
     typst
     pacman-contrib
@@ -25,12 +28,11 @@ PACKAGES=(
     flatpak
     lsfg-vk-bin # only git version on chaotic
     7zip
-    grim
-    slurp
+    grim slurp
     fwupd
     fastfetch
-    swayimg
-    timeshift xorg-xhost
+    reflector
+    sunshine-beta-bin
 
     # desktop
     signal-desktop
@@ -42,6 +44,8 @@ PACKAGES=(
     ente-desktop-bin
     grayjay-bin
     localsend
+    timeshift xorg-xhost
+    thunar thunar-media-tags-plugin
 
     # terminal emulators
     kitty
@@ -71,27 +75,20 @@ PACKAGES=(
     noto-fonts
     noto-fonts-emoji
     noto-fonts-extra
+    apple-font
 
     # themes
-    catppuccin-gtk-theme-mocha
+    graphite-gtk-theme-black-compact-git
 
     ### hyprland and utilities ###
-    hyprland
+    hyprland hyprlock hypridle hyprsunset hyprpaper hyprlauncher hyprpolkitagent
     waybar
     dunst
-    hyprpaper
-    hyprlauncher
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal xdg-desktop-portal-hyprland
     udiskie
-    hyprlock
-    hypridle
-    hyprsunset
-    hyprpolkitagent
     pavucontrol
     rofi
     nwg-look
-    swayosd
 
     ### dev ###
     # tools
@@ -108,7 +105,8 @@ PACKAGES=(
     opencode-bin
     gemini-cli
     # editors
-    neovim
+    # neovim # waiting for native package manager availability
+    neovim-nightly-bin
     helix
     zed
     # languages
