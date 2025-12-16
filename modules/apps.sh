@@ -139,13 +139,17 @@ PACKAGES=(
 
 # Update package database and upgrade system
 echo "Updating package database and upgrading system..."
-paru -Syu --noconfirm || {
+sudo pacman -Syu --noconfirm || {
     echo "Error: Failed to update system. Exiting."
     exit 1
 }
 
+# AUR helper
+echo "Installing yay..."
+sudo pacman -S yay --needed --noconfirm
+
 echo "Installing packages: ${PACKAGES[*]}"
-if paru -S --needed --noconfirm "${PACKAGES[@]}"; then
+if yay -S --needed --noconfirm "${PACKAGES[@]}"; then
     echo "✓ All packages installed successfully!"
 else
     echo "✗ Installation completed with some errors (check output above)."

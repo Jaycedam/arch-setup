@@ -5,7 +5,6 @@ MODULES_DIR="${ROOT_DIR}/modules"
 
 # todo: enable 32-bit support
 
-source "${MODULES_DIR}/paru.sh"
 source "${MODULES_DIR}/chaotic-aur.sh"
 source "${MODULES_DIR}/apps.sh"
 # source "${MODULES_DIR}/dotfiles.sh"
