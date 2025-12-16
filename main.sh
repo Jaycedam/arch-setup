@@ -8,8 +8,7 @@ MODULES_DIR="${ROOT_DIR}/modules"
 source "${MODULES_DIR}/paru.sh"
 source "${MODULES_DIR}/chaotic-aur.sh"
 source "${MODULES_DIR}/apps.sh"
-source "${MODULES_DIR}/dotfiles.sh"
-source "${MODULES_DIR}/uwsm.sh"
+# source "${MODULES_DIR}/dotfiles.sh"
 
 # todo: uncommend color and multilib from /etc/pacman.conf
 
