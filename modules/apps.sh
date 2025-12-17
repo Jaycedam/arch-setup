@@ -3,6 +3,7 @@
 # todo: separate on files per category
 PACKAGES=(
     ### cli ###
+    impala # wifi tui selector
     fish
     btop
     fzf
