@@ -5,9 +5,10 @@ MODULES_DIR="${ROOT_DIR}/modules"
 
 # todo: enable 32-bit support
 
+source "${MODULES_DIR}/tty-colemak-dh-iso.sh"
 source "${MODULES_DIR}/chaotic-aur.sh"
 source "${MODULES_DIR}/apps.sh"
-# source "${MODULES_DIR}/dotfiles.sh"
+source "${MODULES_DIR}/dotfiles.sh"
 
 # todo: uncommend color and multilib from /etc/pacman.conf
 
