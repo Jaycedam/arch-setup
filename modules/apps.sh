@@ -82,11 +82,13 @@ PACKAGES=(
     hyprland hyprlock hypridle hyprsunset hyprpaper hyprlauncher hyprpolkitagent
     waybar
     dunst
-    xdg-desktop-portal xdg-desktop-portal-hyprland
+    xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
     udiskie
     pavucontrol
     rofi
     nwg-look
+    uwsm
+    gnome-keyring
 
     ### dev ###
     # tools
