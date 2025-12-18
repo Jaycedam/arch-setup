@@ -45,7 +45,6 @@ PACKAGES=(
     ente-desktop-bin
     grayjay-bin
     localsend
-    timeshift xorg-xhost
     thunar thunar-media-tags-plugin
 
     # terminal emulators
@@ -59,15 +58,13 @@ PACKAGES=(
     ### gaming ###
     steam
     lutris
-    gamemode
-    lib32-gamemode
+    gamemode lib32-gamemode
     gamescope
-    lib32-gnutls
     dolphin-emu
     shadps4-bin # check chaotic differences
     gopher64
     heroic-games-launcher-bin
-    protonup-qt
+    protonplus
     pcsx2-latest-bin # chaotic only has git version
 
     ### fonts ###
@@ -76,7 +73,7 @@ PACKAGES=(
     noto-fonts
     noto-fonts-emoji
     noto-fonts-extra
-    apple-font
+    apple-fonts
 
     # themes
     graphite-gtk-theme-black-compact-git
