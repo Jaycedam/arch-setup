@@ -11,6 +11,7 @@ source "${MODULES_DIR}/dotfiles.sh"
 source "${MODULES_DIR}/apps.sh"
 source "${MODULES_DIR}/uwsm.sh"
 source "${MODULES_DIR}/themes.sh"
+source "${MODULES_DIR}/fish-shell.sh"
 
 # todo: uncommend color and multilib from /etc/pacman.conf
 
